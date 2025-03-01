@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramadan 2025 - Details</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.0/flowbite.min.js"></script>
+    <style>
+        /* Background container */
+        .bg-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-image: url('images/bg.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            animation: zoomMove 30s infinite alternate ease-in-out;
+        }
+
+        /* Enhanced Animation */
+        @keyframes zoomMove {
+            0% {
+                transform: scale(1.1) translate(0, 0);
+            }
+
+            25% {
+                transform: scale(1.2) translate(-10px, -10px);
+            }
+
+            50% {
+                transform: scale(1.15) translate(20px, 20px);
+            }
+
+            75% {
+                transform: scale(1.2) translate(-10px, 15px);
+            }
+
+            100% {
+                transform: scale(1.1) translate(0, 0);
+            }
+        }
+    </style>
+</head>
+
+<body class="flex items-center justify-center min-h-screen relative">
+
+    <!-- Background Animation -->
+    <div class="bg-container"></div>
+
+    <div class="bg-white bg-opacity-50 shadow-lg rounded-lg p-6 max-w-md w-full text-center relative z-10">
+        <h1 class="text-2xl font-serif font-bold text-center mb-4 flex items-center justify-center gap-2">Ramadan
+            Calendar 2025
+            <a href="calender.html">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.7"
+                    stroke="currentColor" class="w-8 h-8 text-blue-600 animate-pulse hover:text-[#ff3300]">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M6.75 2.994v2.25m10.5-2.25v2.25m-14.252 13.5V7.491a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v11.251m-18 0a2.25 2.25 0 0 0 2.25 2.25h13.5a2.25 2.25 0 0 0 2.25-2.25m-18 0v-7.5a2.25 2.25 0 0 1 2.25-2.25h13.5a2.25 2.25 0 0 1 2.25 2.25v7.5m-6.75-6h2.25m-9 2.25h4.5m.002-2.25h.005v.006H12v-.006Zm-.001 4.5h.006v.006h-.006v-.005Zm-2.25.001h.005v.006H9.75v-.006Zm-2.25 0h.005v.005h-.006v-.005Zm6.75-2.247h.005v.005h-.005v-.005Zm0 2.247h.006v.006h-.006v-.006Zm2.25-2.248h.006V15H16.5v-.005Z" />
+                </svg></a>
+        </h1>
+
+        <div class="space-y-4">
+            <!-- Day & Date Section -->
+            <div class="p-4 bg-blue-950 bg-opacity-70 rounded-lg shadow-sm grid grid-cols-2 gap-4">
+                <div class="bg-white p-3 rounded-md shadow">
+                    <p class="text-lg font-serif font-semibold text-black">Day: <br><span id="day"
+                            class="text-blue-600"></span></p>
+                </div>
+                <div class="bg-white p-3 rounded-md shadow">
+                    <p class="text-lg font-serif font-semibold text-black">Date: <br><span id="date"
+                            class="text-blue-600"></span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sehri & Iftar Section -->
+            <div class="p-4 bg-blue-950 rounded-lg bg-opacity-70 shadow-sm grid grid-cols-2 gap-4">
+                <div class="bg-white p-3 rounded-md shadow">
+                    <p class="text-lg font-serif font-semibold text-black">Sehri Time: <br><span id="sehri"
+                            class="text-green-600"></span></p>
+                </div>
+                <div class="bg-white p-3 rounded-md shadow">
+                    <p class="text-lg font-serif font-semibold text-black">Iftar Time: <br><span id="iftar"
+                            class="text-red-600"></span></p>
+                </div>
+            </div>
+
+            <div class="p-4 bg-gray-950 rounded-lg bg-opacity-90 shadow-sm grid grid-cols-3 gap-4">
+                <button type="button"
+                    class="w-full text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-6 py-3 flex items-center justify-center gap-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22" stroke-width="1.5"
+                        stroke="currentColor" class="size-4 flex-shrink-0 text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M19.114 5.636a9 9 0 0 1 0 12.728M16.463 8.288a5.25 5.25 0 0 1 0 7.424M6.75 8.25l4.72-4.72a.75.75 0 0 1 1.28.53v15.88a.75.75 0 0 1-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.009 9.009 0 0 1 2.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75Z" />
+                    </svg>
+                    <span class="quran-text text-xs">Quran: Para-1</span>
+                </button>
+
+                <button type="button" id="salatButton"
+                    class="w-full text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-6 py-3 flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                    Salat
+                </button>
+
+                <!-- Modal for Prayer Times -->
+                <div id="salatModal"
+                    class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+                    <div class="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
+                        <h2 class="text-2xl font-bold text-center text-gray-800 mb-4">Prayer Times</h2>
+
+                        <!-- Salat Times Grid -->
+                        <div class="divide-y divide-gray-300 font-serif">
+                            <div class="p-3 flex justify-between items-center">
+                                <div class="flex items-center gap-2">
+                                    <img src="images/fazr.ico" alt="Fajr Icon" class="w-6 h-6">
+                                    <span class="text-lg font-semibold text-blue-600">Fajr</span>
+                                </div>
+                                <span id="fajrTime" class="text-gray-700 font-medium"></span>
+                            </div>
+                        
+                            <div class="p-3 flex justify-between items-center">
+                                <div class="flex items-center gap-2">
+                                    <img src="images/zuhr.ico" alt="Dhuhr Icon" class="w-6 h-6">
+                                    <span class="text-lg font-semibold text-yellow-600">Dhuhr</span>
+                                </div>
+                                <span id="dhuhrTime" class="text-gray-700 font-medium"></span>
+                            </div>
+                        
+                            <div class="p-3 flex justify-between items-center">
+                                <div class="flex items-center gap-2">
+                                    <img src="images/asr.ico" alt="Asr Icon" class="w-6 h-6">
+                                    <span class="text-lg font-semibold text-orange-600">Asr</span>
+                                </div>
+                                <span id="asrTime" class="text-gray-700 font-medium"></span>
+                            </div>
+                        
+                            <div class="p-3 flex justify-between items-center">
+                                <div class="flex items-center gap-2">
+                                    <img src="images/magrib.ico" alt="Maghrib Icon" class="w-6 h-6">
+                                    <span class="text-lg font-semibold text-red-600">Maghrib</span>
+                                </div>
+                                <span id="maghribTime" class="text-gray-700 font-medium"></span>
+                            </div>
+                        
+                            <div class="p-3 flex justify-between items-center">
+                                <div class="flex items-center gap-2">
+                                    <img src="images/isha.ico" alt="Isha Icon" class="w-6 h-6">
+                                    <span class="text-lg font-semibold text-purple-600">Isha</span>
+                                </div>
+                                <span id="ishaTime" class="text-gray-700 font-medium"></span>
+                            </div>
+                        </div>
+                        
+
+                        <!-- Close Button -->
+                        <button onclick="closeSalatModal()"
+                            class="mt-5 w-full bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg shadow-md text-lg font-semibold">
+                            Close
+                        </button>
+                    </div>
+                </div>
+
+
+                <!-- Amal Button-->
+                <button id="amal-modal-toggle" type="button"
+                    class="w-full text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 shadow-lg shadow-lime-500/50 dark:shadow-lg dark:shadow-lime-800/80 font-medium rounded-lg text-sm px-6 py-3 flex items-center justify-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-5 h-5">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
+                    </svg>
+                    Amal
+                </button>
+
+                <!-- Amal Modal -->
+                <div id="amal-modal"
+                    class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+                    <div class="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
+                        <h2 class="text-xl font-bold mb-4">Ramadan Amal</h2>
+                        <p class="text-sm text-gray-600 mb-2"><b>Author:</b> <span id="amal-author"></span></p>
+                        <p class="text-sm text-gray-600 mb-2"><b>Editor:</b> <span id="amal-editor"></span></p>
+                        <p class="text-sm text-gray-600 mb-4"><b>Description:</b> <span id="amal-description"></span>
+                        </p>
+
+                        <div id="amal-content" class="overflow-y-auto max-h-60 space-y-4"></div>
+
+                        <button id="close-amal-modal"
+                            class="mt-4 px-4 py-2 text-white bg-gradient-to-r bg-[#ff3300] hover:bg-lime-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 shadow-lg shadow-lime-500/50 dark:shadow-lg dark:shadow-lime-800/80">Close</button>
+                    </div>
+                </div>
+
+                <!-- JavaScript for Modal -->
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const amalButton = document.getElementById("amal-modal-toggle");
+                        const modal = document.getElementById("amal-modal");
+                        const closeModal = document.getElementById("close-amal-modal");
+                        const amalContent = document.getElementById("amal-content");
+
+                        amalButton.addEventListener("click", function () {
+                            fetch("amal.json")
+                                .then(response => response.json())
+                                .then(data => {
+                                    document.getElementById("amal-author").textContent = data.author;
+                                    document.getElementById("amal-editor").textContent = data.editor;
+                                    document.getElementById("amal-description").textContent = data.description;
+
+                                    amalContent.innerHTML = "";
+                                    data.schedule.forEach((item, index) => {
+                                        let taskHtml = `
+                                            <div class="p-3 bg-lime-200 rounded-md shadow">
+                                                <h3 class="text-lg font-semibold">${index + 1}. ${item.task}</h3>
+                                                <p class="text-sm text-gray-600">${item.details}</p>
+                                                ${item.reference ? `<p class="text-xs text-gray-500">Reference: ${item.reference}</p>` : ""}
+                                            </div>
+                                        `;
+                                        amalContent.innerHTML += taskHtml;
+                                    });
+
+                                    modal.classList.remove("hidden");
+                                })
+                                .catch(error => console.error("Error loading amal.json:", error));
+                        });
+
+                        closeModal.addEventListener("click", function () {
+                            modal.classList.add("hidden");
+                        });
+                    });
+                </script>
+            </div>
+
+            <div id="quranAudioContainer" class="hidden p-4 bg-gray-200 rounded-lg shadow-md relative">
+                <button id="closeQuranAudio" class="absolute top-2 right-2 text-red-500 text-lg">&times;</button>
+                <audio id="quranAudio" controls class="w-full"></audio>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Function to get query parameters from URL
+            function getQueryParams() {
+                const params = new URLSearchParams(window.location.search);
+                return {
+                    day: params.get("day"),
+                    date: params.get("date"),
+                    sehri: params.get("sehri"),
+                    iftar: params.get("iftar"),
+                };
+            }
+
+            // Get the data from URL
+            const dayData = getQueryParams();
+            const dayNumber = parseInt(dayData.day) || 1; // Default to 1 if not found
+
+            // Update HTML elements
+            document.getElementById("day").textContent = dayData.day;
+            document.getElementById("date").textContent = dayData.date;
+            document.getElementById("sehri").textContent = dayData.sehri;
+            document.getElementById("iftar").textContent = dayData.iftar;
+
+            // Quran Para Button
+            const quranButton = document.querySelector("button:has(svg)");
+            const quranAudio = document.getElementById("quranAudio");
+            const audioContainer = document.getElementById("quranAudioContainer");
+            const closeQuranAudio = document.getElementById("closeQuranAudio");
+
+            // Update button text based on day
+            const quranText = document.querySelector(".quran-text");
+            quranText.textContent = `Quran: Para-${dayNumber}`;
+
+            // Quran Audio Click Event
+            quranButton.addEventListener("click", function () {
+                const audioPath = `audiobook_quran/para ${String(dayNumber).padStart(2, '0')}.mp3`;
+
+                // Set audio source
+                quranAudio.src = audioPath;
+                quranAudio.play();
+
+                // Show the audio container
+                audioContainer.classList.remove("hidden");
+            });
+            // Close Quran Audio
+            closeQuranAudio.addEventListener("click", function () {
+                quranAudio.pause(); // Stop audio playback
+                quranAudio.currentTime = 0; // Reset audio
+                audioContainer.classList.add("hidden"); // Hide the audio container
+            });
+        });
+    </script>
+    <script>
+        const salatTimes = {
+            1: { Fajr: "5:04 AM", Dhuhr: "12:10 PM", Asr: "3:32 PM", Maghrib: "6:02 PM", Isha: "7:17 PM" },
+            2: { Fajr: "5:04 AM", Dhuhr: "12:10 PM", Asr: "3:32 PM", Maghrib: "6:02 PM", Isha: "7:17 PM" },
+            3: { Fajr: "5:03 AM", Dhuhr: "12:10 PM", Asr: "3:32 PM", Maghrib: "6:03 PM", Isha: "7:18 PM" },
+            4: { Fajr: "5:02 AM", Dhuhr: "12:10 PM", Asr: "3:32 PM", Maghrib: "6:03 PM", Isha: "7:18 PM" },
+            5: { Fajr: "5:01 AM", Dhuhr: "12:10 PM", Asr: "3:32 PM", Maghrib: "6:04 PM", Isha: "7:19 PM" },
+            6: { Fajr: "5:00 AM", Dhuhr: "12:09 PM", Asr: "3:32 PM", Maghrib: "6:04 PM", Isha: "7:19 PM" },
+            7: { Fajr: "4:59 AM", Dhuhr: "12:09 PM", Asr: "3:32 PM", Maghrib: "6:04 PM", Isha: "7:20 PM" },
+            8: { Fajr: "4:58 AM", Dhuhr: "12:09 PM", Asr: "3:32 PM", Maghrib: "6:05 PM", Isha: "7:20 PM" },
+            9: { Fajr: "4:57 AM", Dhuhr: "12:09 PM", Asr: "3:32 PM", Maghrib: "6:05 PM", Isha: "7:20 PM" },
+            10: { Fajr: "4:56 AM", Dhuhr: "12:08 PM", Asr: "3:32 PM", Maghrib: "6:06 PM", Isha: "7:21 PM" },
+            11: { Fajr: "4:55 AM", Dhuhr: "12:08 PM", Asr: "3:32 PM", Maghrib: "6:06 PM", Isha: "7:21 PM" },
+            12: { Fajr: "4:54 AM", Dhuhr: "12:08 PM", Asr: "3:32 PM", Maghrib: "6:07 PM", Isha: "7:22 PM" },
+            13: { Fajr: "4:53 AM", Dhuhr: "12:08 PM", Asr: "3:32 PM", Maghrib: "6:07 PM", Isha: "7:22 PM" },
+            14: { Fajr: "4:52 AM", Dhuhr: "12:07 PM", Asr: "3:32 PM", Maghrib: "6:07 PM", Isha: "7:23 PM" },
+            15: { Fajr: "4:51 AM", Dhuhr: "12:07 PM", Asr: "3:32 PM", Maghrib: "6:08 PM", Isha: "7:23 PM" },
+            16: { Fajr: "4:50 AM", Dhuhr: "12:07 PM", Asr: "3:32 PM", Maghrib: "6:08 PM", Isha: "7:23 PM" },
+            17: { Fajr: "4:49 AM", Dhuhr: "12:06 PM", Asr: "3:32 PM", Maghrib: "6:09 PM", Isha: "7:24 PM" },
+            18: { Fajr: "4:48 AM", Dhuhr: "12:06 PM", Asr: "3:32 PM", Maghrib: "6:09 PM", Isha: "7:24 PM" },
+            19: { Fajr: "4:47 AM", Dhuhr: "12:06 PM", Asr: "3:32 PM", Maghrib: "6:09 PM", Isha: "7:25 PM" },
+            20: { Fajr: "4:46 AM", Dhuhr: "12:06 PM", Asr: "3:31 PM", Maghrib: "6:10 PM", Isha: "7:25 PM" },
+            21: { Fajr: "4:45 AM", Dhuhr: "12:05 PM", Asr: "3:31 PM", Maghrib: "6:10 PM", Isha: "7:26 PM" },
+            22: { Fajr: "4:44 AM", Dhuhr: "12:05 PM", Asr: "3:31 PM", Maghrib: "6:11 PM", Isha: "7:26 PM" },
+            23: { Fajr: "4:43 AM", Dhuhr: "12:05 PM", Asr: "3:31 PM", Maghrib: "6:11 PM", Isha: "7:27 PM" },
+            24: { Fajr: "4:42 AM", Dhuhr: "12:04 PM", Asr: "3:31 PM", Maghrib: "6:11 PM", Isha: "7:27 PM" },
+            25: { Fajr: "4:41 AM", Dhuhr: "12:04 PM", Asr: "3:31 PM", Maghrib: "6:12 PM", Isha: "7:27 PM" },
+            26: { Fajr: "4:40 AM", Dhuhr: "12:04 PM", Asr: "3:31 PM", Maghrib: "6:12 PM", Isha: "7:28 PM" },
+            27: { Fajr: "4:39 AM", Dhuhr: "12:03 PM", Asr: "3:30 PM", Maghrib: "6:13 PM", Isha: "7:28 PM" },
+            28: { Fajr: "4:38 AM", Dhuhr: "12:03 PM", Asr: "3:30 PM", Maghrib: "6:13 PM", Isha: "7:29 PM" },
+            29: { Fajr: "4:37 AM", Dhuhr: "12:03 PM", Asr: "3:30 PM", Maghrib: "6:13 PM", Isha: "7:29 PM" },
+            30: { Fajr: "4:36 AM", Dhuhr: "12:03 PM", Asr: "4:29 PM", Maghrib: "6:14 PM", Isha: "7:30 PM" },
+        };
+
+        // Function to open Salat modal and display prayer times
+        function openSalatModal() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const day = urlParams.get("day");
+            const times = salatTimes[day];
+
+            if (times) {
+                document.getElementById("fajrTime").textContent = times.Fajr;
+                document.getElementById("dhuhrTime").textContent = times.Dhuhr;
+                document.getElementById("asrTime").textContent = times.Asr;
+                document.getElementById("maghribTime").textContent = times.Maghrib;
+                document.getElementById("ishaTime").textContent = times.Isha;
+            } else {
+                document.getElementById("salatModal").innerHTML = "<p class='text-red-500 text-center'>No data available for this day.</p>";
+            }
+
+            document.getElementById("salatModal").classList.remove("hidden");
+        }
+
+        // Function to close modal
+        function closeSalatModal() {
+            document.getElementById("salatModal").classList.add("hidden");
+        }
+
+        // Add event listener to Salat button
+        document.getElementById("salatButton").addEventListener("click", openSalatModal);
+
+    </script>
+</body>
+
+</html>
