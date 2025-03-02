@@ -1,7 +1,6 @@
 ### 📅 𝐑𝐚𝐦𝐚𝐝𝐚𝐧 𝐂𝐚𝐥𝐞𝐧𝐝𝐚𝐫 𝟐𝟎𝟐𝟓 🌙
 
-
-### "ٱلسَّلَامُ عَلَيْكُمْ"
+<h2 align = "center"> "ٱلسَّلَامُ عَلَيْكُمْ </h2>
 
 Introducing my crafted "𝐑𝐚𝐦𝐚𝐝𝐚𝐧 𝐂𝐚𝐥𝐞𝐧𝐝𝐚𝐫 𝟐𝟎𝟐𝟓" website that brings an immersive experience for Muslims observing the holy month. 
 With a serene **Islamic Nasheed** playing in the background, 
